@@ -1,4 +1,4 @@
-package com.example.studyandroid;
+package com.example.studyandroid.Activity;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+
+import com.example.studyandroid.R;
 /*
 액티비티 수명주기 [ onCreate - onStart / onRestart - onResume - onPause - onStop - onDestroy ] 에서,
 시스템 메모리가 모자랄 경우, 시스템 자체적으로 onStop, onDestroy를 콜백하지 않고 액티비티를 강제로 종료시켜 메모리를 확보할 때가 있다.
@@ -72,6 +74,7 @@ public class ConfigChanged extends AppCompatActivity {
             }
         });
     }
+
 
     @Override
     protected void onResume() {
