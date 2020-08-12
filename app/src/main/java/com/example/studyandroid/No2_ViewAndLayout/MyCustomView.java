@@ -1,4 +1,4 @@
-package com.example.studyandroid.ViewAndLayout;
+package com.example.studyandroid.No2_ViewAndLayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;

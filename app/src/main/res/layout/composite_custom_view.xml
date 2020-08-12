@@ -5,15 +5,15 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    tools:context=".ViewAndLayout.CompositeCustomView">
+    tools:context=".No2_ViewAndLayout.CompositeCustomView">
 
-    <com.example.studyandroid.ViewAndLayout.MyCustomView
+    <com.example.studyandroid.No2_ViewAndLayout.MyCustomView
         android:id="@+id/indicator"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:selected="1">
 
-    </com.example.studyandroid.ViewAndLayout.MyCustomView>
+    </com.example.studyandroid.No2_ViewAndLayout.MyCustomView>
 
     <Button
         android:id="@+id/button"
