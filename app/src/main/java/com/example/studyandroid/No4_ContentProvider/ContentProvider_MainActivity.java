@@ -126,9 +126,9 @@ public class ContentProvider_MainActivity extends AppCompatActivity {
         // 쿼리문 작성 - sortOrder (취득일자 내림차순으로 정렬함)
         String sortOrder = ImageColumns.DATE_TAKEN + " DESC";
 
+        // 쿼리문 작성 - 1개만 가져옴
         queryUri = queryUri.buildUpon().appendQueryParameter("limit", "1").build();
 
-        // 쿼리문 작성 - 1개만 가져옴
         return cr.query(queryUri, projection, null, null, sortOrder);
     }
 
