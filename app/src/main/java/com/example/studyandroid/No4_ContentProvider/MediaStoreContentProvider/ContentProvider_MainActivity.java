@@ -1,4 +1,4 @@
-package com.example.studyandroid.No4_ContentProvider;
+package com.example.studyandroid.No4_ContentProvider.MediaStoreContentProvider;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;

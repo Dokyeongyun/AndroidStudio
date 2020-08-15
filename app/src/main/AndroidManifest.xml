@@ -3,8 +3,7 @@
     package="com.example.studyandroid">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -13,14 +12,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".No4_ContentProvider.ContentProvider_MainActivity">
+        <activity android:name=".No4_ContentProvider.WordOfToday2.WordOfToday_MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".No3_Fragment.NetworkCheckFragment.NetworkCheck_MainActivity"/>
+        <provider
+            android:name=".No4_ContentProvider.WordOfToday2.WordOfTodayProvider"
+            android:authorities="com.example.studyandroid.wordoftoday2"
+
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".No4_ContentProvider.MediaStoreContentProvider.ContentProvider_MainActivity">
+
+        </activity>
+        <activity android:name=".No3_Fragment.NetworkCheckFragment.NetworkCheck_MainActivity" />
         <activity android:name=".No3_Fragment.NestedFragment.NestedFragment_MainActivity" />
         <activity android:name=".No3_Fragment.DynamicFragment.Fragment_DynamicUsing" />
         <activity android:name=".No3_Fragment.StaticFragment.Fragment_StaticUsing" />
