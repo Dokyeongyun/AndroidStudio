@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:allowBackup="true"
@@ -12,23 +13,40 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".No4_ContentProvider.WordOfToday2.WordOfToday_MainActivity">
+        <activity android:name=".No5_BroadcastReceiver.WakefulBroadcastReceiver.WakefulBroadcastReceiver_MainActivity"></activity>
+        <activity android:name=".StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".No5_BroadcastReceiver.VolumeChangedBroadcastReceiver.VolumeChangedBroadcastReceiver" />
+        <receiver android:name=".No5_BroadcastReceiver.WakefulBroadcastReceiver.MyReceiver">
+            <intent-filter>
+                <action android:name="com.example.studyandroid.No5_BroadcastReceiver.WakefulBroadcastReceiver.TEST_ACTION"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </receiver>
+        <service android:name=".No5_BroadcastReceiver.WakefulBroadcastReceiver.MyIntentService"/>
+
+        <!-- 앱이 켜지면 Service 시작하는 Receiver | RECEIVE_BOOT_COMPLETED 퍼미션 선언해야 함 -->
+        <!--
+        <receiver android:name=".BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
+        -->
+        <activity android:name=".No4_ContentProvider.WordOfToday2.WordOfToday_MainActivity" />
+
         <provider
             android:name=".No4_ContentProvider.WordOfToday2.WordOfTodayProvider"
             android:authorities="com.example.studyandroid.wordoftoday2"
-
             android:enabled="true"
             android:exported="true" />
 
-        <activity android:name=".No4_ContentProvider.MediaStoreContentProvider.ContentProvider_MainActivity">
-
-        </activity>
+        <activity android:name=".No4_ContentProvider.MediaStoreContentProvider.ContentProvider_MainActivity" />
         <activity android:name=".No3_Fragment.NetworkCheckFragment.NetworkCheck_MainActivity" />
         <activity android:name=".No3_Fragment.NestedFragment.NestedFragment_MainActivity" />
         <activity android:name=".No3_Fragment.DynamicFragment.Fragment_DynamicUsing" />

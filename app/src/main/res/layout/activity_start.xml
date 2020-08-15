@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".StartActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/No1_Activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="No1_Activity" />
+
+                <Button
+                    android:id="@+id/no1_configChanged"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="startOnClick"
+                    android:text="ConfigChanged" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/No2_ViewAndLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center"
+                    android:text="No2_ViewAndLayout" />
+
+                <Button
+                    android:id="@+id/no2_customView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="startOnClick"
+                    android:text="CustomView" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/No3_Fragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No3_Fragment" />
+
+                <Button
+                    android:id="@+id/no3_staticFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="startOnClick"
+                    android:text="staticFragment" />
+
+                <Button
+                    android:id="@+id/no3_dynamicFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="startOnClick"
+                    android:text="dynamicFragment" />
+
+                <Button
+                    android:id="@+id/no3_networkCheck"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="startOnClick"
+                    android:text="networkCheckFragment" />
+
+                <Button
+                    android:id="@+id/no3_nestedFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:onClick="startOnClick"
+                    android:text="nestedFragment" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/No4_ContentProvider"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No4_ContentProvider" />
+
+                <Button
+                    android:id="@+id/no4_mediaStore"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="MediaStoreContentProvider" />
+
+                <Button
+                    android:id="@+id/no4_wordOfToday"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="wordOfToday" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/No5_BroadcastReceiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No5_BroadcastReceiver" />
+
+                <Button
+                    android:id="@+id/no5_volumeChangedBR"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="volumeChangedBroadcastReceiver" />
+
+                <Button
+                    android:id="@+id/no5_wakefulBR"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="WakefulBroadcastReceiver" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
