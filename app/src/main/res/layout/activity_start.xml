@@ -201,18 +201,20 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:id="@+id/No7_SupportLibrary"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:gravity="center"
-                    android:text="No6_musicPlayService" />
+                    android:text="No7_SupportLibrary" />
 
                 <Button
+                    android:id="@+id/no7_notificationCompat"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:onClick="startOnClick"
-                    android:text="musicPlayService" />
+                    android:text="no7_notificationCompat" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

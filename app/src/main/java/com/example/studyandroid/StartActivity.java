@@ -18,6 +18,7 @@ import com.example.studyandroid.No5_BroadcastReceiver.VolumeChangedBroadcastRece
 import com.example.studyandroid.No5_BroadcastReceiver.WakefulBroadcastReceiver.WakefulBroadcastReceiver_MainActivity;
 import com.example.studyandroid.No6_Service.IntentService.IntentService_MainActivity;
 import com.example.studyandroid.No6_Service.MusicPlayerService.MusicPlayerService_MainActivity;
+import com.example.studyandroid.No7_SupportLibrary.NotificationCompat.NotificationCompat_MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -77,6 +78,10 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.no6_fibService:
                 intent = new Intent(this, IntentService_MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.no7_notificationCompat:
+                intent = new Intent(this, NotificationCompat_MainActivity.class);
                 startActivity(intent);
                 break;
         }
