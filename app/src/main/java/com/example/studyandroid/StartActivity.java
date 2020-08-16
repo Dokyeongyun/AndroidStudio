@@ -16,7 +16,8 @@ import com.example.studyandroid.No4_ContentProvider.MediaStoreContentProvider.Co
 import com.example.studyandroid.No4_ContentProvider.WordOfToday2.WordOfToday_MainActivity;
 import com.example.studyandroid.No5_BroadcastReceiver.VolumeChangedBroadcastReceiver.VolumeChangedBroadcastReceiver;
 import com.example.studyandroid.No5_BroadcastReceiver.WakefulBroadcastReceiver.WakefulBroadcastReceiver_MainActivity;
-import com.example.studyandroid.No6_Service.MusicPlayerService_MainActivity;
+import com.example.studyandroid.No6_Service.IntentService.IntentService_MainActivity;
+import com.example.studyandroid.No6_Service.MusicPlayerService.MusicPlayerService_MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -72,6 +73,10 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.no6_musicPlayService:
                 intent = new Intent(this, MusicPlayerService_MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.no6_fibService:
+                intent = new Intent(this, IntentService_MainActivity.class);
                 startActivity(intent);
                 break;
         }

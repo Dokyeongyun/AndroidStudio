@@ -13,11 +13,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".No6_Service.MusicPlayerService_MainActivity"></activity>
-        <service android:name=".No6_Service.BackgroundMusicService"
+        <activity android:name=".No6_Service.IntentService.IntentService_MainActivity"></activity>
+
+        <service
+            android:name=".No6_Service.IntentService.FibService"
+            android:exported="false" />
+
+        <activity android:name=".No6_Service.MusicPlayerService.MusicPlayerService_MainActivity" />
+
+        <service
+            android:name=".No6_Service.MusicPlayerService.BackgroundMusicService"
             android:enabled="true"
-            android:exported="false">
-        </service>
+            android:exported="false" />
 
         <activity android:name=".No5_BroadcastReceiver.WakefulBroadcastReceiver.WakefulBroadcastReceiver_MainActivity" />
         <activity android:name=".StartActivity">

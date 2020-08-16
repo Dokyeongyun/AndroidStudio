@@ -184,6 +184,35 @@
                     android:layout_weight="1"
                     android:onClick="startOnClick"
                     android:text="musicPlayService" />
+
+                <Button
+                    android:id="@+id/no6_fibService"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="fibService" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No6_musicPlayService" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="musicPlayService" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
