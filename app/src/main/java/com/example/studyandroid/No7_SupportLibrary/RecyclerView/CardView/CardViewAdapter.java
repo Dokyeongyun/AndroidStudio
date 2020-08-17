@@ -14,7 +14,7 @@ import java.util.List;
 
 public class CardViewAdapter extends RecyclerView.Adapter<CardViewAdapter.ViewHolder> {
 
-    List<String> dataset;
+    public List<String> dataset;
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView textView;

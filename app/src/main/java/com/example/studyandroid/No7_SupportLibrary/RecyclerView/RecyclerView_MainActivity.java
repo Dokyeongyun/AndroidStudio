@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.CardView.CardViewRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Divider.DividerRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Grid.GridRecyclerView_MainActivity;
+import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Manipulation.ManipulationRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity;
 import com.example.studyandroid.R;
 /*
@@ -93,13 +94,12 @@ public class RecyclerView_MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        /*
         findViewById(R.id.manipulation_execute_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = ManipulationActivity.createIntent(RecyclerView_MainActivity.this);
+                Intent intent = ManipulationRecyclerView_MainActivity.createIntent(RecyclerView_MainActivity.this);
                 startActivity(intent);
             }
-        });*/
+        });
     }
 }
