@@ -30,14 +30,14 @@ public class DividerRecyclerView_MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_divider_recycler_view__main);
+        setContentView(R.layout.activity_simple_recycler_view__main);
         setupRecyclerView();
     }
 
 
     private void setupRecyclerView() {
 
-        recyclerView = findViewById(R.id.simpleRecyclerView2);
+        recyclerView = findViewById(R.id.simpleRecyclerView);
         recyclerView.setHasFixedSize(true);
 
         simpleStringAdapter = new SimpleStringAdapter(DummyDataGenerator.generateStringListData());

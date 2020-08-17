@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Divider.DividerRecyclerView_MainActivity;
+import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Grid.GridRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity;
 import com.example.studyandroid.R;
 /*
@@ -80,21 +81,22 @@ public class RecyclerView_MainActivity extends AppCompatActivity {
 /*        findViewById(R.id.cardview_execute_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = CardViewRecyclerViewActivity.createIntent(MainActivity.this);
+                Intent intent = CardViewRecyclerViewActivity.createIntent(RecyclerView_MainActivity.this);
                 startActivity(intent);
             }
-        });
+        });*/
         findViewById(R.id.grid_execute_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = GridRecyclerViewActivity.createIntent(MainActivity.this);
+                Intent intent = GridRecyclerView_MainActivity.createIntent(RecyclerView_MainActivity.this);
                 startActivity(intent);
             }
         });
+        /*
         findViewById(R.id.manipulation_execute_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = ManipulationActivity.createIntent(MainActivity.this);
+                Intent intent = ManipulationActivity.createIntent(RecyclerView_MainActivity.this);
                 startActivity(intent);
             }
         });*/
