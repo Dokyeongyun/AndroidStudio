@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".No7_SupportLibrary.RecyclerView.Grid.GridRecyclerView_MainActivity"></activity>
+        <activity android:name=".No7_SupportLibrary.RecyclerView.CardView.CardViewRecyclerView_MainActivity"></activity>
+        <activity android:name=".No7_SupportLibrary.RecyclerView.Manipulation.ManipulationRecyclerView_MainActivity" />
+        <activity android:name=".No7_SupportLibrary.RecyclerView.Grid.GridRecyclerView_MainActivity" />
         <activity android:name=".No7_SupportLibrary.RecyclerView.Divider.DividerRecyclerView_MainActivity" />
         <activity android:name=".No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity" />
         <activity android:name=".No7_SupportLibrary.RecyclerView.RecyclerView_MainActivity" />

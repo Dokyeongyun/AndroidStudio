@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.studyandroid.No7_SupportLibrary.RecyclerView.CardView.CardViewRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Divider.DividerRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Grid.GridRecyclerView_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity;
@@ -78,13 +79,13 @@ public class RecyclerView_MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-/*        findViewById(R.id.cardview_execute_button).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.cardview_execute_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = CardViewRecyclerViewActivity.createIntent(RecyclerView_MainActivity.this);
+                Intent intent = CardViewRecyclerView_MainActivity.createIntent(RecyclerView_MainActivity.this);
                 startActivity(intent);
             }
-        });*/
+        });
         findViewById(R.id.grid_execute_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
