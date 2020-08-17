@@ -19,6 +19,7 @@ import com.example.studyandroid.No5_BroadcastReceiver.WakefulBroadcastReceiver.W
 import com.example.studyandroid.No6_Service.IntentService.IntentService_MainActivity;
 import com.example.studyandroid.No6_Service.MusicPlayerService.MusicPlayerService_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.NotificationCompat.NotificationCompat_MainActivity;
+import com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -82,6 +83,10 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.no7_notificationCompat:
                 intent = new Intent(this, NotificationCompat_MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.no7_simpleRecyclerView:
+                intent = new Intent(this, SimpleRecyclerView_MainActivity.class);
                 startActivity(intent);
                 break;
         }

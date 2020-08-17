@@ -215,6 +215,14 @@
                     android:layout_weight="1"
                     android:onClick="startOnClick"
                     android:text="no7_notificationCompat" />
+
+                <Button
+                    android:id="@+id/no7_simpleRecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="simpleRecyclerView" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
