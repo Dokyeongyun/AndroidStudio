@@ -1,9 +1,10 @@
 package com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -15,7 +16,6 @@ public class SimpleRecyclerView_MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private SimpleStringAdapter simpleStringAdapter;
-    private LinearLayoutManager layoutManager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,9 +31,6 @@ public class SimpleRecyclerView_MainActivity extends AppCompatActivity {
         // recyclerView 의 크기가 변하지 않는 경우, setHasFixedSize(true) 옵션을 설정하면 성능이 개선됨
         recyclerView.setHasFixedSize(true);
 
-        layoutManager = new LinearLayoutManager(this);
-        recyclerView.setLayoutManager(layoutManager);
-
         // Adapter 설정
         simpleStringAdapter = new SimpleStringAdapter(DummyDataGenerator.generateStringListData());
         simpleStringAdapter.setOnItemViewClickListener(new View.OnClickListener() {
@@ -44,5 +41,9 @@ public class SimpleRecyclerView_MainActivity extends AppCompatActivity {
         });
 
         recyclerView.setAdapter(simpleStringAdapter);
+    }
+
+    public static Intent createIntent(Context context) {
+        return new Intent(context, SimpleRecyclerView_MainActivity.class);
     }
 }

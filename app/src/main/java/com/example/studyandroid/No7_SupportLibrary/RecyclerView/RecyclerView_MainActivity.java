@@ -2,8 +2,12 @@ package com.example.studyandroid.No7_SupportLibrary.RecyclerView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
+import com.example.studyandroid.No7_SupportLibrary.RecyclerView.Divider.DividerRecyclerView_MainActivity;
+import com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity;
 import com.example.studyandroid.R;
 /*
 
@@ -55,5 +59,44 @@ public class RecyclerView_MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycler_view__main);
+        setupViews();
+    }
+
+    private void setupViews() {
+        findViewById(R.id.simple_execute_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = SimpleRecyclerView_MainActivity.createIntent(RecyclerView_MainActivity.this);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.divider_execute_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = DividerRecyclerView_MainActivity.createIntent(RecyclerView_MainActivity.this);
+                startActivity(intent);
+            }
+        });
+/*        findViewById(R.id.cardview_execute_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = CardViewRecyclerViewActivity.createIntent(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.grid_execute_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = GridRecyclerViewActivity.createIntent(MainActivity.this);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.manipulation_execute_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = ManipulationActivity.createIntent(MainActivity.this);
+                startActivity(intent);
+            }
+        });*/
     }
 }
