@@ -19,6 +19,9 @@ import com.example.studyandroid.R;
   : RecyclerView 에는 아이템을 추가, 삭제는 물론,
   드래그 앤 드롭, 스와이프 등의 조작을 가능하게 할 수 있다.
 
+  ItemTouchHelper 클래스의 onMove, onSwipe 등의 메소드 구현 하면 됨
+
+
  */
 public class ManipulationRecyclerView_MainActivity extends AppCompatActivity {
 

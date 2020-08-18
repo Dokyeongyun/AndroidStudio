@@ -2,6 +2,7 @@ package com.example.studyandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ComponentName;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -89,6 +90,13 @@ public class StartActivity extends AppCompatActivity {
             case R.id.no7_recyclerView:
                 intent = new Intent(this, RecyclerView_MainActivity.class);
                 startActivity(intent);
+                break;
+            case R.id.no8_MVP_MVVP:
+                ComponentName compName = new ComponentName("com.github.advanced_android.newgithubrepo", "com.github.advanced_android.newgithubrepo.RepositoryListActivity");
+                Intent intent2 = new Intent(Intent.ACTION_MAIN);
+                intent2.addCategory(Intent.CATEGORY_LAUNCHER);
+                intent2.setComponent(compName);
+                startActivity(intent22);
                 break;
         }
     }
