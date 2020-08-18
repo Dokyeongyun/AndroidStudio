@@ -1,2 +1,2 @@
 rootProject.name='StudyAndroid'
-include ':app', ':app-original', ':app-mvp'
+include ':app', ':app-original', ':app-mvp', ':app-mvvm'

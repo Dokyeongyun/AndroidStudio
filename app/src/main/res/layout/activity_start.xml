@@ -214,7 +214,7 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:onClick="startOnClick"
-                    android:text="no7_notificationCompat" />
+                    android:text="notificationCompat" />
 
                 <Button
                     android:id="@+id/no7_recyclerView"
@@ -244,7 +244,15 @@
                     android:layout_height="40dp"
                     android:layout_weight="1"
                     android:onClick="startOnClick"
-                    android:text="no8_MVP_MVVP" />
+                    android:text="MVP_MVVP" />
+
+                <Button
+                    android:id="@+id/no8_dataBinding"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="dataBinding" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

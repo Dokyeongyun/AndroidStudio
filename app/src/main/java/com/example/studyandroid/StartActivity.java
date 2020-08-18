@@ -21,7 +21,7 @@ import com.example.studyandroid.No6_Service.IntentService.IntentService_MainActi
 import com.example.studyandroid.No6_Service.MusicPlayerService.MusicPlayerService_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.NotificationCompat.NotificationCompat_MainActivity;
 import com.example.studyandroid.No7_SupportLibrary.RecyclerView.RecyclerView_MainActivity;
-import com.example.studyandroid.No7_SupportLibrary.RecyclerView.SimpleRecyclerView.SimpleRecyclerView_MainActivity;
+import com.example.studyandroid.no8_mvp_mvvm.DataBinding_MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 
@@ -96,7 +96,11 @@ public class StartActivity extends AppCompatActivity {
                 Intent intent2 = new Intent(Intent.ACTION_MAIN);
                 intent2.addCategory(Intent.CATEGORY_LAUNCHER);
                 intent2.setComponent(compName);
-                startActivity(intent22);
+                startActivity(intent2);
+                break;
+            case R.id.no8_dataBinding:
+                intent = new Intent(this, DataBinding_MainActivity.class);
+                startActivity(intent);
                 break;
         }
     }
