@@ -8,7 +8,6 @@ import androidx.loader.content.CursorLoader;
 import androidx.loader.content.Loader;
 
 import android.content.Context;
-import android.database.ContentObserver;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.view.View;
@@ -19,15 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.studyandroid.R;
-import com.facebook.stetho.BuildConfig;
-import com.facebook.stetho.Stetho;
 
 import static android.provider.BaseColumns._ID;
 import static com.example.studyandroid.No4_ContentProvider.WordOfToday2.WordOfTodayContract.WordOfTodayColumns.DATE;
 import static com.example.studyandroid.No4_ContentProvider.WordOfToday2.WordOfTodayContract.WordOfTodayColumns.NAME;
 import static com.example.studyandroid.No4_ContentProvider.WordOfToday2.WordOfTodayContract.WordOfTodayColumns.WORDS;
 
-import static com.facebook.stetho.Stetho.*;
 
 
 /*
@@ -76,12 +72,12 @@ public class WordOfToday_MainActivity extends AppCompatActivity implements Loade
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if (BuildConfig.DEBUG) {
+/*        if (BuildConfig.DEBUG) {
             Context context = getApplicationContext();
 
             Stetho.initializeWithDefaults(this);
            // initialize(newInitializerBuilder(context).enableDumpapp(defaultDumperPluginsProvider(context)).build());
-        }
+        }*/
 
         setContentView(R.layout.activity_word_of_today__main);
 
