@@ -1,10 +1,20 @@
 package com.example.studyandroid.No9_Gradle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.studyandroid.BuildConfig;
+import com.example.studyandroid.GreatFeature;
 import com.example.studyandroid.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 
 /**
@@ -96,7 +106,6 @@ import com.example.studyandroid.R;
  *       build.dependOn(configure)
  *   - 이처럼 안드로이드 앱의 빌드는 assembleDebug 태스크에 의존하는 태스크가 차례대로 실행되는 것
  */
-
 /**
  * [ Gradle _ 프로젝트 커스터마이징 ]
  *   : 유료버전과 무료버전 앱이 있다고 할 때, 각 버전 별로 기능이 달라 코드를 수정해야한다.
@@ -108,6 +117,28 @@ import com.example.studyandroid.R;
  *      - debug : apk 에 디버그 서명 / release : apk 에 릴리즈 서명
  *      - 일반적으로 debug 를 이용해 디버그를 수행하고, release 를 이용해 Google Play 에 릴리즈함.
  *      - build.gradle(app) 의 android 블록 내의 buildTypes 블록에 내용을 작성
+ *          * 이 실습에서는 build Type 에 따라 debug 버전, release 버전, stage 버전을 생성하였고,
+ *            release 버전은 서명을 설정하고 프로가드를 활성화 하였다.
+ *            또, stage 버전일 때, 앱 내에서 이용하는 URL 의 주소를 테스트용으로 설정할 수 있게 설정하였다.
+ *              ( stage/res/values/strings.xml 파일 내에 api 주소 정의 )
+ *   2. Product Flavors
+ *      - Product Flavors 는 debug, release 버전 등의 빌드타입이 아닌,
+ *        구현 자체를 바꾸거나 별도의 apk 를 만들고 싶을 때 이용
+ *      - ex) 무료버전 vs 유료버전
+ *          * 이 실습에서는 프로덕트 플레이버를 이용해 무료버전과 유료버전을 만들어 본다.
+ *            1. 프로덕트 플레이버 선언 -> build.gradle(app) 파일 내에 productFlavors 블록 작성
+ *            2. 무료버전 클래스 생성 -> src/free/java/com/example/studyandroid/GreatFeature.java
+ *            3. 유료버전 클래스 생성 -> src/pro/java/com/example/studyandroid/GreatFeature.java
+ *            4. 구현에서 각각 호출 -> src/main/java/com/example/studyandroid/Gradle_MainActivity.java
+ *                                    [ new GreatFeature().doIt(Gradle_MainActivity.this); ]
+ *
+ *     * Build Type 과 Product Flavors 를 모두 정의하게 되면,
+ *       Build Type 과 Product Flavors 를 조합하여 Build Variants 가 형성되게 된다.
+ *          예를들어, Build Type : debug, release, stage
+ *                   Product Flavors : free, pro
+ *                   ==> Build Variants : freeDebug, freeRelease, freeStage, proDebug, proRelease, proStage
+ *       이 때, build.gradle(app) 와 Product Flavors 블록에서 동일한 프로퍼티를 작성한다면,
+ *          Product Flavors 의 프로퍼티가 덮어쓴다.
  *
  */
 
@@ -118,5 +149,39 @@ public class Gradle_MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gradle__main);
+        final TextView packageNameTextView = findViewById(R.id.package_name);
+        final TextView versionNameTextView = findViewById(R.id.version_name);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+
+        packageNameTextView.setText(BuildConfig.APPLICATION_ID);
+        versionNameTextView.setText(BuildConfig.VERSION_NAME);
+        //setSupportActionBar(toolbar);
+
+        Toast.makeText(this, getString(R.string.api_url)+"에 액세스", Toast.LENGTH_SHORT).show();
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new GreatFeature().doIt(Gradle_MainActivity.this);
+            }
+        });
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id = item.getItemId();
+
+        if(id == R.id.action_settings){
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

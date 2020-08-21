@@ -253,6 +253,31 @@
                     android:layout_weight="1"
                     android:onClick="startOnClick"
                     android:text="dataBinding" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/No9_Gradle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="No9_Gradle" />
+
+                <Button
+                    android:id="@+id/no9_gradle"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="gradle" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

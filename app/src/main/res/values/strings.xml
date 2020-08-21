@@ -1,6 +1,8 @@
 <resources>
-    <string name="app_name">StudyAndroid</string>
-
+    <!--<string name="app_name">StudyAndroid</string>-->
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">GradleSample</string>
+    <string name="action_settings">Settings</string>
+    <string name="api_url">http://example.com/production.json</string>
 </resources>

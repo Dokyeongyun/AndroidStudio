@@ -1,14 +1,6 @@
 apply plugin: 'com.android.application'
 
 android {
-    signingConfigs {
-        release {
-            storeFile file('-')
-            storePassword '-'
-            keyAlias = '-'
-            keyPassword '-'
-        }
-    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
 
@@ -24,12 +16,21 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    signingConfigs {
+        release {
+            storeFile file('-')
+            storePassword '-'
+            keyAlias = '-'
+            keyPassword '-'
+        }
+    }
+
     buildTypes {
 
         // 릴리즈 버전
         release {
             // 1. 서명 설정 -> 릴리즈 버전에는 서명이 필요
-           signingConfig signingConfigs.release
+            signingConfig signingConfigs.release
             // 2. 프로가드 활성화 -> 릴리즈 버전은 소스코드 보호를 위해 프로가드 활성화를 권장
             minifyEnabled true
             // 프로가드 설정파일 지정
@@ -50,6 +51,30 @@ android {
             initWith(buildTypes.debug)
             // 6. 패키지 이름 끝에 .stage 추가
             applicationIdSuffix ".stage"
+        }
+    }
+
+    flavorDimensions "flavors"
+
+    productFlavors {
+
+        // 무료 버전
+        free {
+            dimension "flavors"
+        }
+
+        // 유료 버전
+        pro {
+            dimension "flavors"
+
+        }
+    }
+
+    sourceSets {
+        pro {
+            java {
+                srcDirs 'src/pro/java'
+            }
         }
     }
 
