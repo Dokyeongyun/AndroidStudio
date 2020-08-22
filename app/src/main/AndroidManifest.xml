@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".No9_Gradle.Gradle_MainActivity"></activity>
+        <activity android:name=".No10_UnitTest.LocalUnitTest_MainActivity"></activity>
+        <activity android:name=".No9_Gradle.Gradle_MainActivity" />
         <activity android:name=".no8_mvp_mvvm.DataBinding_MainActivity" />
         <activity android:name=".No7_SupportLibrary.RecyclerView.CardView.CardViewRecyclerView_MainActivity" />
         <activity android:name=".No7_SupportLibrary.RecyclerView.Manipulation.ManipulationRecyclerView_MainActivity" />
