@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     // 테스트 시 예외발생을 밪이하기 위한 testOptions 설정
-    testOptions{
+    testOptions {
         unitTests.returnDefaultValues = true
     }
 
@@ -104,6 +104,21 @@ dependencies {
     // 단위 테스트에 필요한 dependencies
     //testImplementation "org.mockito:mockito-core:1.+"
     testImplementation 'org.mockito:mockito-inline:2.13.0'
-
     testImplementation 'junit:junit:4.12'
+
+    // UI 테스트에 필요한 dependencies
+    androidTestImplementation 'junit:junit:4.12'
+    // JUnit4를 사용하기 위해 필요합니다
+    androidTestImplementation('com.android.support.test:runner:0.4') {
+        exclude module: 'support-annotations'
+    }
+    // JUnit4의 Rule을 사용하기 위해 필요합니다
+    androidTestImplementation('com.android.support.test:rules:0.4') {
+        exclude module: 'support-annotations'
+    }
+    // Espresso
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.2') {
+        exclude module: 'support-annotations'
+    }
+
 }

@@ -14,10 +14,16 @@ import com.google.android.material.snackbar.Snackbar;
 
 /**
  * [ Software Test ]
- *  : 소프트웨어 개발 과정 전반에 걸쳐 소프트웨어의 개발이 잘 이루어지고 있는 지 확인하기 위한 테스트를 수행한다.
- *    종류로는 단위테스트, 통합테스트, 인수테스트, 시스템테스트 등이 있다.
- *  --------------------------------------------------------------------------------------------
-*/
+ * : 소프트웨어 개발 과정 전반에 걸쳐 소프트웨어의 개발이 잘 이루어지고 있는 지 확인하기 위한 테스트를 수행한다.
+ * 종류로는 단위테스트, 통합테스트, 인수테스트, 시스템테스트 등이 있다.
+ * --------------------------------------------------------------------------------------------
+ * <p>
+ * [ Unit Test ]
+ * : 단위테스트는 가장 작은 단위의 테스트로 클래스나 메소드 등의 작은 단위를 테스트하기 위한 목적으로 수행된다.
+ * 소스코드 자체의 타당성, 품질을 확인하기 위한 테스트이다.
+ * 구현 로직과 관련이 깊기 때문에 소스코드를 작성하는 프로그래머가 직접 테스트한다.
+ * --------------------------------------------------------------------------------------------
+ */
 /**
  *  [ Unit Test ]
  *  : 단위테스트는 가장 작은 단위의 테스트로 클래스나 메소드 등의 작은 단위를 테스트하기 위한 목적으로 수행된다.
@@ -25,6 +31,7 @@ import com.google.android.material.snackbar.Snackbar;
  *    구현 로직과 관련이 깊기 때문에 소스코드를 작성하는 프로그래머가 직접 테스트한다.
  *  --------------------------------------------------------------------------------------------
  */
+
 /**
  *  [ Unit Test _ 테스트방법 ( JUnit, Mockito ) ]
  *
@@ -64,11 +71,11 @@ public class LocalUnitTest_MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_local_unit_test__main);
-        Toolbar toolbar =  findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         //setSupportActionBar(toolbar);
 
 
-        FloatingActionButton fab =  findViewById(R.id.fab);
+        FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -77,6 +84,7 @@ public class LocalUnitTest_MainActivity extends AppCompatActivity {
             }
         });
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);

@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.example.studyandroid.No10_UnitTest.BmiCalculator.BmiCalculator_MainActivity;
 import com.example.studyandroid.No10_UnitTest.LocalUnitTest.LocalUnitTest_MainActivity;
+import com.example.studyandroid.No11_UITest.UITest_MainActivity;
 import com.example.studyandroid.No1_Activity.ConfigChanged;
 import com.example.studyandroid.No2_ViewAndLayout.CompositeCustomView;
 import com.example.studyandroid.No3_Fragment.DynamicFragment.Fragment_DynamicUsing;
@@ -115,6 +116,10 @@ public class StartActivity extends AppCompatActivity {
                 break;
             case R.id.no10_bmiCalculator:
                 intent = new Intent(this, BmiCalculator_MainActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.no11_UiTest:
+                intent = new Intent(this, UITest_MainActivity.class);
                 startActivity(intent);
                 break;
         }
