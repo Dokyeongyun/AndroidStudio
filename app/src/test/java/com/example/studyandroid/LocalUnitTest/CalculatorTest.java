@@ -1,6 +1,6 @@
-package com.example.studyandroid;
+package com.example.studyandroid.LocalUnitTest;
 
-import com.example.studyandroid.No10_UnitTest.Calculator;
+import com.example.studyandroid.No10_UnitTest.LocalUnitTest.Calculator;
 
 import org.junit.Test;
 

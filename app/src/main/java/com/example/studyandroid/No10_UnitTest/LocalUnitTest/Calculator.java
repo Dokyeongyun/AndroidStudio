@@ -1,4 +1,4 @@
-package com.example.studyandroid.No10_UnitTest;
+package com.example.studyandroid.No10_UnitTest.LocalUnitTest;
 
 public class Calculator {
     public int evaluate(String expression) {

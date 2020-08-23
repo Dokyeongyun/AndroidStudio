@@ -302,6 +302,14 @@
                     android:onClick="startOnClick"
                     android:text="localUnitTest" />
 
+                <Button
+                    android:id="@+id/no10_bmiCalculator"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:onClick="startOnClick"
+                    android:text="bmiCalculator" />
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

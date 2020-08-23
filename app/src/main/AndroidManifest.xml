@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".No10_UnitTest.LocalUnitTest_MainActivity"></activity>
+        <activity android:name=".No10_UnitTest.BmiCalculator.BmiCalculator_MainActivity"></activity>
+        <activity android:name=".No10_UnitTest.LocalUnitTest.LocalUnitTest_MainActivity" />
         <activity android:name=".No9_Gradle.Gradle_MainActivity" />
         <activity android:name=".no8_mvp_mvvm.DataBinding_MainActivity" />
         <activity android:name=".No7_SupportLibrary.RecyclerView.CardView.CardViewRecyclerView_MainActivity" />
@@ -55,7 +56,8 @@
             </intent-filter>
         </receiver>
 
-        <service android:name=".No5_BroadcastReceiver.WakefulBroadcastReceiver.MyIntentService" /> <!-- 앱이 켜지면 Service 시작하는 Receiver | RECEIVE_BOOT_COMPLETED 퍼미션 선언해야 함 -->
+        <service android:name=".No5_BroadcastReceiver.WakefulBroadcastReceiver.MyIntentService" />
+        <service android:name=".No10_UnitTest.BmiCalculator.BmiSaveService" /> <!-- 앱이 켜지면 Service 시작하는 Receiver | RECEIVE_BOOT_COMPLETED 퍼미션 선언해야 함 -->
         <!--
         <receiver android:name=".BootReceiver">
             <intent-filter>

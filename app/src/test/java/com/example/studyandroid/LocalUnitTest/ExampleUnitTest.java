@@ -1,4 +1,4 @@
-package com.example.studyandroid;
+package com.example.studyandroid.LocalUnitTest;
 
 import org.junit.Test;
 

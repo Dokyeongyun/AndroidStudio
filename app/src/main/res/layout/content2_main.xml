@@ -10,7 +10,7 @@
     android:paddingRight="16dp"
     android:paddingTop="16dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.studyandroid.No10_UnitTest.LocalUnitTest_MainActivity"
+    tools:context="com.example.studyandroid.No10_UnitTest.LocalUnitTest.LocalUnitTest_MainActivity"
     tools:showIn="@layout/activity_gradle__main">
 
     <TextView
